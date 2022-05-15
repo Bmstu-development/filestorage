@@ -33,7 +33,8 @@ SECRET_KEY = os.environ['APP_KEY']
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '127.0.0.1'
+    '127.0.0.1',
+    '192.168.0.21'
 ]
 
 
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news',
+    'design',
 ]
 
 MIDDLEWARE = [
@@ -79,9 +81,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'django_settings.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
     'default': {
