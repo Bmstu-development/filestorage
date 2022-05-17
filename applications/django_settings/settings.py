@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'news',
     'design',
+    'django_tables2',
 ]
 
 MIDDLEWARE = [

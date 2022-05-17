@@ -1,0 +1,21 @@
+html, body {
+    height: 100vh;
+    background-color: #e9ecef;
+    /*margin: 0;*/
+}
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    text-align: center;
+    background-color: #ffffff;
+    bottom: 0;
+    width: 110%;
+    height: 70px;
+    font-family: 'Montserrat', sans-serif;
+    margin: -8px;
+}

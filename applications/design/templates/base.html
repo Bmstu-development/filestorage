@@ -7,14 +7,25 @@
     {% include 'css_list.html' %}
     {% block additional_css %}{% endblock %}
 </head>
+{#<body class="{% block body_class %}hold-transition sidebar-mini layout-fixed{% endblock %}">#}
 <body>
-{% block main_menu %}
-    <ul class="menu-main">
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Файлы</a></li>
-        <li><a href="#">Полезные ссылки</a>
-        </li>
-    </ul>
+<ul class="main-menu">
+    {% block main_menu %}
+    {% endblock %}
+</ul>
+<div class="content-wrapper">
+    <section class="content">
+        <div class="container-fluid">
+            {% block content %}{% endblock %}
+        </div>
+    </section>
+</div>
+{% block footer %}
+    <div class="wrapper">
+        <div class="footer">
+            <h3>&copy; 2022-{% now 'Y' %}</h3>
+        </div>
+    </div>
 {% endblock %}
 </body>
 </html>

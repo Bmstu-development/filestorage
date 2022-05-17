@@ -9,6 +9,13 @@ class NewsListView(SingleTableView):
     model = models.Publication
     table_class = tables.PublicationTable
 
+    def get_queryset(self):
+        fields = [
+            'title',
+            'created'
+        ]
+        return super().get_queryset().only(*fields)
+
 
 class NewsDetailView(DetailView):
     pass
