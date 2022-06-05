@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{#{% load static bootstrap4 %}#}
+
+{% block page_title %}Главная{% endblock %}
+{% block main_menu %}
+    <li class="active"><a href="#">Главная</a></li>
+    <li><a href="#">Файлы</a></li>
+    <li><a href="#">Прочее</a></li>
+{% endblock %}
+
+{% load render_table from django_tables2 %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-12">
+            <div class="card left-col">
+                <div class="card-body">
+                    <div class="table table-striped pb-4">
+                        {% render_table table %}
+                    </div>
+                </div>
+            </div>
+            <div class="card right-col">
+                <div class="card-body">
+                    <div class="table table-striped pb-4">
+                        <h3>Расписание</h3>
+                        <p>В разработке</p>
+{#                        {% render_table table %}#}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
