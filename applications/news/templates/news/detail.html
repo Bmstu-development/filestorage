@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{#{% load static bootstrap4 %}#}
+
+{% block page_title %}{{ object.title }}{% endblock %}
+{% block main_menu %}
+    <li><a href="{% url 'news_list' %}">Главная</a></li>
+    <li><a href="#">Файлы</a></li>
+    <li><a href="#">Прочее</a></li>
+{% endblock %}
+
+{% load render_table from django_tables2 %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-body">
+            <h1>{{ object.title }}</h1>
+            <p>{{ object.text }}</p>
+            <p>{{ object.created }}</p>
+        </div>
+    </div>
+{% endblock %}

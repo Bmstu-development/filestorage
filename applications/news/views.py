@@ -18,4 +18,5 @@ class NewsListView(SingleTableView):
 
 
 class NewsDetailView(DetailView):
-    pass
+    template_name = 'news/detail.html'
+    model = models.Publication
